@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  id="com.songz.cordova.parse" version="0.0.1">
+  <name>ParseCordovaPlugin</name>
+  <description>Cordova Plugin for Parse Plugin</description>
+  <license>Apache 2.0</license>
+  <keywords>Parse,Facebook</keywords>
+
+  <js-module src="www/parse.js" name="device">
+    <clobbers target="device" />
+  </js-module>
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="ParsePlugin">
+        <param name="ios-package" value="ParsePlugin"/>
+      </feature>
+    </config-file>
+    <header-file src="src/ios/AppDelegate+notification.h" />
+    <source-file src="src/ios/AppDelegate+notification.m" />
+  </platform>
+</plugin>

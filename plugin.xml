@@ -13,10 +13,10 @@
   <platform name="ios">
     <config-file target="config.xml" parent="/*">
       <feature name="ParsePlugin">
-        <param name="ios-package" value="ParsePlugin"/>
+        <param name="ios-package" value="CordovaParsePlugin"/>
       </feature>
     </config-file>
-    <header-file src="src/ios/AppDelegate+notification.h" />
-    <source-file src="src/ios/AppDelegate+notification.m" />
+    <header-file src="src/ios/CordovaParsePlugin.h" />
+    <source-file src="src/ios/CordovaParsePlugin.m" />
   </platform>
 </plugin>

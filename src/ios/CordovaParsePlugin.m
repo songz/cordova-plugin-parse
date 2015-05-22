@@ -1,0 +1,33 @@
+/********* Echo.m Cordova Plugin Implementation *******/
+
+#import "CordovaParsePlugin.h"
+#import <Cordova/CDV.h>
+
+@implementation CordovaParsePlugin
+
+- (void)echo:(CDVInvokedUrlCommand*)command
+{
+  NSLog(@"ECHO");
+  NSLog(@"ECHO");
+  NSLog(@"ECHO");
+  NSLog(@"ECHO");
+  NSLog(@"ECHO");
+  NSLog(@"ECHO");
+  NSLog(@"ECHO");
+  NSLog(@"ECHO");
+  NSLog(@"ECHO");
+  NSLog(@"ECHO");
+  NSLog(@"ECHO");
+    CDVPluginResult* pluginResult = nil;
+    NSString* echo = [command.arguments objectAtIndex:0];
+    
+    if (echo != nil && [echo length] > 0) {
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
+    } else {
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+    }
+    
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+@end
